@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{
+    --clr-primary-1: hsl(158, 36%, 37%);
+    --clr-hover-1: hsl(158, 46%, 15%);
+    --clr-primary-2:hsl(30, 38%, 92%);
+    --clr-neutral-1: hsl(212, 21%, 14%);
+    --clr-neutral-2: hsl(228, 12%, 48%);
+    --clr-neutral-3: white;
+    --fs-p:14px;
+    --fs-lg:2em;
+    --fw-sm:500;
+    --fw-lg:700;
+    --ff-1:'Montserrat', sans-serif;
+    --ff-2:'Fraunces', sans-serif;
+}
+
+/*
+Layout styles
+*/
+body{
+    margin:15px;
+    padding:1rem;
+    background-color: var(--clr-primary-2);
+    box-sizing: border-box;
+    width: 100vw;
+    height:100vh;
+    font-family: var(--ff-1);
+
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    text-align:left;
+    padding:1rem;
+    background-color:var(--clr-neutral-3);
+    border-radius: 0 0 15px 15px;
+    
+}
+.text-container{
+    margin:15px;
+}
+.price-container{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Text styles*/
+p{
+    color:var(--clr-neutral-2);
+    font-size:var(--fw-p);
+    font-weight:var(--fw-p);
+}
+.fancy{
+    font-family:var(--ff-1);
+    letter-spacing: .5ch;
+    text-transform: uppercase;
+}
+h1{
+    font-size: var(--fs-lg);
+    font-weight:var(--fw-lg);
+    font-family: var(--ff-2);
+}
+.price{
+    color:var(--clr-primary-1);
+}
+.strike-through{
+    text-decoration: line-through;
+}
+/* Elements */
+button{
+    background-color: var(--clr-primary-1);
+    color:white;
+    border-radius:15px;
+    width:80%;
+    margin:10px auto;
+    height:3.5rem;
+    transition: .5s ease-in-out;
+}
+button:hover{
+    background-color: var(--clr-hover-1);
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+.img-responsive{
+    content:url("./images/image-product-mobile.jpg");
+    content:attr("perfume");
+    width:100%;
+    border-radius:15px 15px 0 0;
+    margin:0;
+}
