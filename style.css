@@ -20,29 +20,35 @@
 Layout styles
 */
 body{
-    margin:15px;
-    padding:1rem;
     background-color: var(--clr-primary-2);
     box-sizing: border-box;
-    width: 100vw;
-    height:100vh;
+    margin:0;
+    width:100vw;
+    height: 100vh;
     font-family: var(--ff-1);
-
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.card{
+    width:min(800px, 80%);
+    height:min(800px, 80%);
+    padding:10px;
+}
 .container{
     display:flex;
     flex-direction: column;
     justify-content:center;
-    align-items: flex-start;
     text-align:left;
-    padding:1rem;
+    padding:.6rem;
     background-color:var(--clr-neutral-3);
     border-radius: 0 0 15px 15px;
+    margin-top:-10px;
     
 }
 .text-container{
-    margin:15px;
+    margin:0 15px;
 }
 .price-container{
     display: flex;
@@ -70,16 +76,22 @@ h1{
 }
 .strike-through{
     text-decoration: line-through;
+    margin-left:20px;
+    align-self: center;
 }
 /* Elements */
 button{
     background-color: var(--clr-primary-1);
     color:white;
-    border-radius:15px;
+    border-radius:10px;
     width:80%;
-    margin:10px auto;
+    border:none;
     height:3.5rem;
     transition: .5s ease-in-out;
+}
+button span{
+    font-weight:var(--fw-lg);
+    margin-left:.5rem;
 }
 button:hover{
     background-color: var(--clr-hover-1);
@@ -91,5 +103,41 @@ button:hover{
     content:attr("perfume");
     width:100%;
     border-radius:15px 15px 0 0;
-    margin:0;
+    object-fit: cover;
+}
+
+/* Media Queries */
+
+@media screen and (min-width:650px){
+    .img-responsive{
+        content:url("./images/image-product-desktop.jpg");
+        width:50%;
+        border-radius:15px 0 0 15px;
+    }
+    .card{
+        display:flex;
+    flex-direction: row;
+    }
+    .container{
+        border-radius: 0 15px 15px 0;
+        margin:0;
+    }
+    button{
+        width:100%;
+        height:4rem;
+    }
+
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .text-container{
+        height:90%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
 }
